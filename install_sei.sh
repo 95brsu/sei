@@ -56,7 +56,7 @@ go version
 echo -e "\e[1m\e[32m3. Downloading and building binaries... \e[0m" && sleep 1
 # download binary
 cd $HOME
-git clone https://github.com/sei-protocol/sei-chain.git
+git clone --depth 1 --branch 1.0.1beta https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
 git checkout 1.0.0beta
 go build -o build/seid ./cmd/sei-chaind
